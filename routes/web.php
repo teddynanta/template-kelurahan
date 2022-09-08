@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
+
+Route::get('/login', function () {
+    return view('login.index');
+});

@@ -56,10 +56,61 @@
 
 
 <!-- Marketing messaging and featurettes
-================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
-
-<div class="marketing">
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+    
+    <div class="marketing">
+        
+    <div class="row mb-5">
+        <div class="col-md-2">
+            <div class="card">
+                <div class="card-body">
+                    <img class="rounded-circle mb-3" height="120px" style="aspect-ratio:1;">
+                    <h5 class="card-title text-center mb-0"> Fitur 1</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card">
+                <div class="card-body">
+                    <img class="rounded-circle mb-3" height="120px" style="aspect-ratio:1;">
+                    <h5 class="card-title text-center mb-0"> Fitur 1</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card">
+                <div class="card-body">
+                    <img class="rounded-circle mb-3" height="120px" style="aspect-ratio:1;">
+                    <h5 class="card-title text-center mb-0"> Fitur 1</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card">
+                <div class="card-body">
+                    <img class="rounded-circle mb-3" height="120px" style="aspect-ratio:1;">
+                    <h5 class="card-title text-center mb-0"> Fitur 1</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card">
+                <div class="card-body">
+                    <img class="rounded-circle mb-3" height="120px" style="aspect-ratio:1;">
+                    <h5 class="card-title text-center mb-0"> Fitur 1</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="card">
+                <div class="card-body">
+                    <img class="rounded-circle mb-3" height="120px" style="aspect-ratio:1;">
+                    <h5 class="card-title text-center mb-0"> Fitur 1</h5>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="row mb-3 text-center">
         <div class="col-md-7 themed-grid-col">
@@ -119,8 +170,24 @@
                 <div class="col-md-12 mb-3">
                     <div class="card">
                         <div class="card-body d-flex flex-row">
-                            <img width="120px" height="150px">
-                            <h5 class="card-title"> d-flex flex-row d-flex flex-row d-flex flex-row d-flex flex-row</h5>
+                            <img width="120px" height="120px">
+                            <h5 class="card-title"> d-flex flex-row d-flex flex-row d-flex flex-row d-flex fle</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="card">
+                        <div class="card-body d-flex flex-row">
+                            <img width="120px" height="120px">
+                            <h5 class="card-title"> d-flex flex-row d-flex flex-row d-flex flex-row d-flex fle</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 mb-3">
+                    <div class="card">
+                        <div class="card-body d-flex flex-row">
+                            <img width="120px" height="120px">
+                            <h5 class="card-title"> d-flex flex-row d-flex flex-row d-flex flex-row d-flex fle</h5>
                         </div>
                     </div>
                 </div>
