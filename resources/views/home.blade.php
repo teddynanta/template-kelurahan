@@ -116,45 +116,11 @@
         </div>
         <div class="col-md-5 themed-grid-col">
             <div class="row">
-                <div class="col-md-4 mb-3">
-                    <div class="card" style="aspect-ratio:1">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card" style="aspect-ratio:1">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card" style="aspect-ratio:1">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card" style="aspect-ratio:1">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card" style="aspect-ratio:1">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card" style="aspect-ratio:1">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                <div class="col-md-12 mb-3">
+                    <div class="card">
+                        <div class="card-body d-flex flex-row">
+                            <img width="120px" height="150px">
+                            <h5 class="card-title"> d-flex flex-row d-flex flex-row d-flex flex-row d-flex flex-row</h5>
                         </div>
                     </div>
                 </div>
