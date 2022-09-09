@@ -22,7 +22,7 @@
       <li class="nav-item">
         <a class="nav-link" href="#">
           <span data-feather="users" class="align-text-bottom"></span>
-          Customers
+          Menu
         </a>
       </li>
       <li class="nav-item">

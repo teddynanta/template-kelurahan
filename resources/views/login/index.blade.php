@@ -27,11 +27,11 @@
             <form action="/login" method="POST">
                 @csrf
                 <img class="mb-4 d-block mx-auto" alt="" width="72" height="57">
-                <h1 class="h3 mb-3 fw-normal text-center">Please Login</h1>
+                <h1 class="h3 mb-3 fw-normal text-center">Silahkan Login</h1>
             
                 <div class="form-floating">
-                    <input type="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" name="email" id="floatingEmail" placeholder="name@example.com" autofocus required>
-                    <label for="floatingEmail">Email address</label>
+                    <input type="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" name="email" id="floatingEmail" autofocus required>
+                    <label for="floatingEmail">Email</label>
                     @error('email')
                     <div class="invalid-feedback">
                         {{ $message }}
@@ -40,7 +40,7 @@
                 </div>
 
                 <div class="form-floating">
-                    <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="floatingPassword" placeholder="Password" required>
+                    <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="floatingPassword" required>
                     <label for="floatingPassword">Password</label>
                     @error('password')
                     <div class="invalid-feedback">
@@ -50,9 +50,7 @@
                 </div>
 
                 <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Login</button>
-            </form>
-            <p class="text-center">Does not have an account? <a href="/register">Create account</a></p>
-            <p class="mt-4 mb-3 text-muted text-center">&copy; 2017–2022</p>
+            </form> 
         </main>
 
     </div>
