@@ -30,9 +30,12 @@
 
       <!-- Logout Button -->
       <li class="nav-item">
-        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-          <i class="fas fa-sign-out-alt mr-2"></i> Logout
-        </a>
+        <form action="/logout" method="POST">
+          @csrf
+          <button type="submit" class="bg-transparent border-0 nav-link">
+              <i class="fas fa-sign-out-alt mr-2"></i> Logout
+          </button>
+        </form>
       </li>
     </ul>
   </nav>
