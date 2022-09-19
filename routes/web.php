@@ -22,6 +22,14 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
 
+Route::get('/dashboard/berita', [DashboardController::class, 'indexBerita'])->middleware('auth');
+
+Route::get('/dashboard/berita/create', [DashboardController::class, 'createBerita'])->middleware('auth');
+
+Route::get('/dashboard/berita/draft', [DashboardController::class, 'draftBerita'])->middleware('auth');
+
+Route::get('/dashboard/berita/{$id}', [DashboardController::class, 'showBerita'])->middleware('auth');
+
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 
 Route::post('/login', [LoginController::class, 'authenticate']);

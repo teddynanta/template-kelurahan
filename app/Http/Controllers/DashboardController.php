@@ -13,4 +13,36 @@ class DashboardController extends Controller
             'active' => 'dashboard'
         ]);
     }
+
+    public function indexBerita()
+    {
+        return view('dashboard.berita.index', [
+            'title' => 'Berita',
+            'active' => 'berita'
+        ]);
+    }
+
+    public function createBerita()
+    {
+        return view('dashboard.berita.create', [
+            'title' => 'Tambah Berita',
+            'active' => 'berita'
+        ]);
+    }
+
+    public function showBerita()
+    {
+        return view('dashboard.berita.show', [
+            'title' => 'Detail Berita',
+            'active' => 'berita'
+        ]);
+    }
+
+    public function draftBerita()
+    {
+        return view('dashboard.berita.draft', [
+            'title' => 'Draft Berita',
+            'active' => 'berita'
+        ]);
+    }
 }
