@@ -4,55 +4,61 @@
 
 <div class="row justify-content-center mt-5">
     <div class="col-md-4">
-
-        @if (session()->has('success'))
-            
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                {{ session('success') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-
-        @endif
-
-        @if (session()->has('loginError'))
-            
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                {{ session('loginError') }}
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-
-        @endif
-
         <main class="form-signin w-100 m-auto">
-            <form action="/login" method="POST">
-                @csrf
-                <img class="mb-4 d-block mx-auto" alt="" width="72" height="57">
-                <h1 class="h3 mb-3 fw-normal text-center">Silahkan Login</h1>
-            
-                <div class="form-floating">
-                    <input type="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" name="email" id="floatingEmail" autofocus required>
-                    <label for="floatingEmail">Email</label>
-                    @error('email')
-                    <div class="invalid-feedback">
-                        {{ $message }}
-                    </div>
-                    @enderror
+            @if (session()->has('loginError'))
+                
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{ session('loginError') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
 
-                <div class="form-floating">
-                    <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="floatingPassword" required>
-                    <label for="floatingPassword">Password</label>
-                    @error('password')
-                    <div class="invalid-feedback">
-                        {{ $message }}
+            @endif
+            <div class="login-box">
+            <!-- /.login-logo -->
+                <div class="card card-outline card-primary">
+                    <div class="card-header text-center">
+                    <a class="h1">Kelurahan X</a>
                     </div>
-                    @enderror
-                </div>
+                    <div class="card-body">
+                    <p class="login-box-msg">Silahkan login untuk melanjutkan</p>
 
-                <button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Login</button>
-            </form> 
+                    <form action="/login" method="POST">
+                        @csrf
+                        <div class="input-group mb-3">
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}"" placeholder="Email" name="email">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                            <span class="fas fa-envelope"></span>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="input-group mb-3">
+                        <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Password">
+                        <div class="input-group-append">
+                            <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="row">
+                        <!-- /.col -->
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        </div>
+                        <!-- /.col -->
+                        </div>
+                    </form>
+
+                    <p class="mt-2 mb-0 text-center">
+                        <h6 class="text-muted font-italic fs-6 text-center pt-3 pb-0">Ganti password anda secara berkala</h6>
+                    </p>
+                    </div>
+                    <!-- /.card-body -->
+                </div>
+            <!-- /.card -->
+            </div>
+            <!-- /.login-box -->
         </main>
-
     </div>
 </div>
 
