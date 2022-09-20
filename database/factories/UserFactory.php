@@ -15,10 +15,12 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'nama' => 'Admin Kelurahan X',
-            'email' => 'kelurahanx.admin@gmail.com',
+            'nama' => 'admin kelurahan',
+            'email' => 'admin@gmail.com',
+            'level' => 'admin',
             'email_verified_at' => now(),
             'password' => bcrypt('malamkelabutanpaawan'),
+            'active' => 1
             // 'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         ];
     }
