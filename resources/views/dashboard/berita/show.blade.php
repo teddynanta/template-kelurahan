@@ -25,10 +25,7 @@
         <div class="col-md-12">
           <div class="card card-primary card-outline">
             <div class="card-header">
-              <h3 class="card-title">List Berita
-                <a href="/dashboard/berita" class="btn btn-default btn-sm">
-                  <i class="fas fa-sync-alt"></i>
-                </a>
+              <h3 class="card-title">{{ $post->title }}
               </h3>
 
               <div class="card-tools">
@@ -46,31 +43,7 @@
             <!-- /.card-header -->
             <div class="card-body p-0">
               <div class="table-responsive mailbox-messages">
-                <table class="table table-hover table-striped">
-                  <thead>
-                    <th>No.</th>
-                    <th>Penulis</th>
-                    <th>Judul</th>
-                    <th>Waktu terbit</th>
-                    <th>Aksi</th>
-                  </thead>
-                  <tbody>
-                    @foreach ($posts as $post)
-                      <tr>
-                        <td>{{ $loop->iteration }}</td>
-                        <td class="mailbox-name">{{ $post->author->nama }}</td>
-                        <td class="mailbox-subject">{{ $post->title }}</td>
-                        <td class="mailbox-date">{{ $post->updated_at->diffForHumans() }}</td>
-                        <td>
-                          <a href="/dashboard/berita/show/id" class="btn-sm btn-info"><i class="far fa-edit"></i></a>
-                          <a href="/dashboard/berita/id" class="btn-sm btn-danger"><i class="far fa-trash-alt"></i></a>
-                          <a href="/dashboard/berita/{{ $post->id }}" class="btn-sm btn-warning"><i class="far fa-eye"></i></a>
-                        </td>
-                      </tr>
-                    @endforeach
-                  </tbody>
-                </table>
-                <!-- /.table -->
+                {!! $post->content !!}
               </div>
               <!-- /.mail-box-messages -->
             </div>

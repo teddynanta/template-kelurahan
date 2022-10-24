@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -17,8 +18,9 @@ class DashboardController extends Controller
     public function indexBerita()
     {
         return view('dashboard.berita.index', [
-            'title' => 'Berita',
-            'active' => 'berita'
+            'title' => 'Dashboard',
+            'active' => 'Dashboard',
+            'posts' => Post::where('author_id', auth()->user()->id)->get()
         ]);
     }
 
@@ -30,11 +32,12 @@ class DashboardController extends Controller
         ]);
     }
 
-    public function showBerita()
+    public function showBerita(Post $post)
     {
         return view('dashboard.berita.show', [
             'title' => 'Detail Berita',
-            'active' => 'berita'
+            'active' => 'berita',
+            'post' => $post
         ]);
     }
 

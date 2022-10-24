@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -35,7 +36,19 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $slug = Str::of($request['title'])->slug('-');
+        $validatedData = $request->validate([
+            'title' => 'required|max:255',
+            'category_id' => 'required',
+            'content' => 'required'
+        ]);
+
+        $validatedData['slug'] = $slug;
+        $validatedData['author'] = auth()->user()->id;
+        $validatedData['excerpt'] = Str::limit(strip_tags($request['content']), 125, '...');
+
+        Post::create($validatedData);
+        return redirect('/dashboard/berita')->with('success', 'Post added succesfully!');
     }
 
     /**
