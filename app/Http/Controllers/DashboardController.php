@@ -11,7 +11,8 @@ class DashboardController extends Controller
     {
         return view('dashboard.index', [
             'title' => 'Dashboard',
-            'active' => 'dashboard'
+            'active' => 'dashboard',
+            'count' => Post::count()
         ]);
     }
 
@@ -20,7 +21,7 @@ class DashboardController extends Controller
         return view('dashboard.berita.index', [
             'title' => 'Dashboard',
             'active' => 'Dashboard',
-            'posts' => Post::where('author_id', auth()->user()->id)->get()
+            'posts' => Post::latest()->where('author_id', auth()->user()->id)->get()
         ]);
     }
 

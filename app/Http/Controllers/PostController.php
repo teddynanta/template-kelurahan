@@ -44,7 +44,7 @@ class PostController extends Controller
         ]);
 
         $validatedData['slug'] = $slug;
-        $validatedData['author'] = auth()->user()->id;
+        $validatedData['author_id'] = auth()->user()->id;
         $validatedData['excerpt'] = Str::limit(strip_tags($request['content']), 125, '...');
 
         Post::create($validatedData);

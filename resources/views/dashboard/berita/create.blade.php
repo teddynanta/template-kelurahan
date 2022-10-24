@@ -49,9 +49,13 @@
                 @enderror
                   </div>
                   <div class="form-group">
-                    <textarea name="content" value="{{ @old('content') }}"></textarea>
+                    <textarea name="content" id="summernote"></textarea>
                     <script>
-                            CKEDITOR.replace( 'content' );
+                      $('#summernote').summernote({
+                        placeholder: 'Hello Bootstrap 5',
+                        tabsize: 2,
+                        height: 300
+                      });
                     </script>
                   </div>
                 </div>
