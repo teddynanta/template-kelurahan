@@ -30,7 +30,7 @@
               <div class="icon">
                 <i class="ion ion-ios-paper"></i>
               </div>
-              <a href="/dashboard/berita" class="small-box-footer">Lihat Berita <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="/dashboard/posts" class="small-box-footer">Lihat Berita <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->

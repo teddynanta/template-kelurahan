@@ -63,7 +63,11 @@
                         <td class="mailbox-date">{{ $post->updated_at->diffForHumans() }}</td>
                         <td>
                           <a href="/dashboard/berita/show/id" class="btn-sm btn-info"><i class="far fa-edit"></i></a>
-                          <a href="/dashboard/berita/id" class="btn-sm btn-danger"><i class="far fa-trash-alt"></i></a>
+                          <form action="/dashboard/berita/{{ $post->id }}" method="POST" class="d-inline">
+                            @method('delete')
+                            @csrf
+                            <button class="btn btn-sm btn-danger border-0 padding-0" onclick="return confirm('Are you sure?')"><i class="far fa-trash-alt"></i></button>
+                          </form>
                           <a href="/dashboard/berita/{{ $post->id }}" class="btn-sm btn-warning"><i class="far fa-eye"></i></a>
                         </td>
                       </tr>

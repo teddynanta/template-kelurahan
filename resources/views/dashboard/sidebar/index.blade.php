@@ -36,25 +36,25 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/dashboard/berita" class="nav-link">
+                <a href="/dashboard/posts" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>List Berita</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/dashboard/berita/create" class="nav-link">
+                <a href="/dashboard/posts/create" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Tambah berita</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/dashboard/berita/draft" class="nav-link">
+                <a href="/dashboard/posts/draft" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Draft</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="/dashboard/berita/kategori" class="nav-link">
+                <a href="/dashboard/posts/category" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Kategori</p>
                 </a>

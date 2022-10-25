@@ -7,42 +7,31 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function index()
+    public function index(Post $post)
     {
         return view('dashboard.index', [
             'title' => 'Dashboard',
             'active' => 'dashboard',
-            'count' => Post::count()
+            'count' => $post->count()
         ]);
     }
 
     public function indexBerita()
     {
-        return view('dashboard.berita.index', [
-            'title' => 'Dashboard',
-            'active' => 'Dashboard',
-            'posts' => Post::latest()->where('author_id', auth()->user()->id)->get()
-        ]);
+        // return $post;
     }
 
     public function createBerita()
     {
-        return view('dashboard.berita.create', [
-            'title' => 'Tambah Berita',
-            'active' => 'berita'
-        ]);
+        //
     }
 
     public function showBerita(Post $post)
     {
-        return view('dashboard.berita.show', [
-            'title' => 'Detail Berita',
-            'active' => 'berita',
-            'post' => $post
-        ]);
+        //
     }
 
-    public function draftBerita()
+    public function draft()
     {
         return view('dashboard.berita.draft', [
             'title' => 'Draft Berita',
